@@ -15,6 +15,7 @@
 		438F2EAE2149A93D001C1022 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EAD2149A93D001C1022 /* Animal.swift */; };
 		438F2EB02149A9D7001C1022 /* Pen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EAF2149A9D7001C1022 /* Pen.swift */; };
 		438F2EB22149A9FB001C1022 /* Habitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EB12149A9FB001C1022 /* Habitat.swift */; };
+		438F2EB42149AA68001C1022 /* BabyAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EB32149AA68001C1022 /* BabyAnimal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		438F2EAD2149A93D001C1022 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		438F2EAF2149A9D7001C1022 /* Pen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pen.swift; sourceTree = "<group>"; };
 		438F2EB12149A9FB001C1022 /* Habitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habitat.swift; sourceTree = "<group>"; };
+		438F2EB32149AA68001C1022 /* BabyAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyAnimal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				438F2EAB2149A79A001C1022 /* HabitatTableViewController.swift */,
 				438F2EAD2149A93D001C1022 /* Animal.swift */,
+				438F2EB32149AA68001C1022 /* BabyAnimal.swift */,
 				438F2EAF2149A9D7001C1022 /* Pen.swift */,
 				438F2EB12149A9FB001C1022 /* Habitat.swift */,
 				4303C30721499B0400A4C787 /* AppDelegate.swift */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				438F2EAC2149A79A001C1022 /* HabitatTableViewController.swift in Sources */,
+				438F2EB42149AA68001C1022 /* BabyAnimal.swift in Sources */,
 				4303C30821499B0400A4C787 /* AppDelegate.swift in Sources */,
 				438F2EAE2149A93D001C1022 /* Animal.swift in Sources */,
 				438F2EB02149A9D7001C1022 /* Pen.swift in Sources */,
