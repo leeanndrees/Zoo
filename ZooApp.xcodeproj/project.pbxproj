@@ -13,6 +13,8 @@
 		4303C31221499B0500A4C787 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4303C31021499B0500A4C787 /* LaunchScreen.storyboard */; };
 		438F2EAC2149A79A001C1022 /* HabitatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EAB2149A79A001C1022 /* HabitatTableViewController.swift */; };
 		438F2EAE2149A93D001C1022 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EAD2149A93D001C1022 /* Animal.swift */; };
+		438F2EB02149A9D7001C1022 /* Pen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EAF2149A9D7001C1022 /* Pen.swift */; };
+		438F2EB22149A9FB001C1022 /* Habitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EB12149A9FB001C1022 /* Habitat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4303C31321499B0500A4C787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		438F2EAB2149A79A001C1022 /* HabitatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitatTableViewController.swift; sourceTree = "<group>"; };
 		438F2EAD2149A93D001C1022 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		438F2EAF2149A9D7001C1022 /* Pen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pen.swift; sourceTree = "<group>"; };
+		438F2EB12149A9FB001C1022 /* Habitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habitat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				438F2EAB2149A79A001C1022 /* HabitatTableViewController.swift */,
 				438F2EAD2149A93D001C1022 /* Animal.swift */,
+				438F2EAF2149A9D7001C1022 /* Pen.swift */,
+				438F2EB12149A9FB001C1022 /* Habitat.swift */,
 				4303C30721499B0400A4C787 /* AppDelegate.swift */,
 				4303C30B21499B0400A4C787 /* Main.storyboard */,
 				4303C30E21499B0500A4C787 /* Assets.xcassets */,
@@ -141,6 +147,8 @@
 				438F2EAC2149A79A001C1022 /* HabitatTableViewController.swift in Sources */,
 				4303C30821499B0400A4C787 /* AppDelegate.swift in Sources */,
 				438F2EAE2149A93D001C1022 /* Animal.swift in Sources */,
+				438F2EB02149A9D7001C1022 /* Pen.swift in Sources */,
+				438F2EB22149A9FB001C1022 /* Habitat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
