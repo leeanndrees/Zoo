@@ -12,6 +12,7 @@ class HabitatTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        useLargeTitles()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +30,12 @@ class HabitatTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HabitatCell", for: indexPath)
         cell.textLabel?.text = habitatsInZoo[indexPath.row].name
         return cell
+    }
+    
+    // MARK: - Private Implementation
+    
+    func useLargeTitles() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     /*
