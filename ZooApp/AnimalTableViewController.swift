@@ -1,5 +1,5 @@
 //
-//  HabitatTableViewController.swift
+//  AnimalTableViewController.swift
 //  ZooApp
 //
 //  Created by DetroitLabs on 9/12/18.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-class HabitatTableViewController: UITableViewController {
+class AnimalTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        useLargeTitles()
-        populatePens()
-        print(lionPen.animals.count)
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,19 +22,13 @@ class HabitatTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return habitatsInZoo.count
+        return lionPen.animals.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HabitatCell", for: indexPath)
-        cell.textLabel?.text = habitatsInZoo[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalCell", for: indexPath)
+        cell.textLabel?.text = lionPen.animals[indexPath.row].name
         return cell
-    }
-    
-    // MARK: - Private Implementation
-    
-    func useLargeTitles() {
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     /*
