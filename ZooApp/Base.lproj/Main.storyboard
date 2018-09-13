@@ -68,6 +68,7 @@
                             <outlet property="delegate" destination="Pam-qx-bEq" id="pGX-yl-RdW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="lgW-pZ-z8L"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3E-WG-snv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +100,7 @@
                             <outlet property="delegate" destination="oeC-Sm-Iax" id="Tpd-uI-Gpf"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="kVh-7Q-3RZ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nnl-D2-XeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
