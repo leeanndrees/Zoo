@@ -14,7 +14,6 @@ class HabitatTableViewController: UITableViewController {
         super.viewDidLoad()
         useLargeTitles()
         populatePens()
-        print(lionPen.animals.count)
     }
 
     override func didReceiveMemoryWarning() {

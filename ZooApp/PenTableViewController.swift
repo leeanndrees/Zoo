@@ -10,6 +10,9 @@ import UIKit
 
 class PenTableViewController: UITableViewController {
 
+    // MARK: - Properties
+    var habitat: Habitat? = grassland
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,13 +25,14 @@ class PenTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return grassland.pens.count
+        
+        return habitat!.pens.count
+        // ^ ^ ^ fix this force unwrap later!
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PenCell", for: indexPath)
-        cell.textLabel?.text = grassland.pens[indexPath.row].name
+        cell.textLabel?.text = habitat!.pens[indexPath.row].name
         return cell
     }
 
