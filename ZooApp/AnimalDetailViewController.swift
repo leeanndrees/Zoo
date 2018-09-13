@@ -29,6 +29,7 @@ class AnimalDetailViewController: UIViewController {
         super.viewDidLoad()
         displayAnimalProperties()
         toggleFieldVisibility()
+        showCurrentValuesInFields()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +60,12 @@ class AnimalDetailViewController: UIViewController {
         animalSpeciesField.isHidden = !animalSpeciesField.isHidden
         animalAgeField.isHidden = !animalAgeField.isHidden
         animalSexField.isHidden = !animalSexField.isHidden
+    }
+    
+    func showCurrentValuesInFields() {
+        animalNameField.text = animalToShow?.name
+        animalSexField.text = animalToShow?.sex
+        animalSpeciesField.text = animalToShow?.species
     }
     
     @IBAction func editAnimalButton(_ sender: UIButton) {
