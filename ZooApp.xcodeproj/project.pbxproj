@@ -20,6 +20,7 @@
 		438F2EB82149B47D001C1022 /* PenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EB72149B47D001C1022 /* PenTableViewController.swift */; };
 		438F2EBA2149B6B0001C1022 /* AnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EB92149B6B0001C1022 /* AnimalTableViewController.swift */; };
 		438F2EBC214A9C02001C1022 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EBB214A9C02001C1022 /* AnimalDetailViewController.swift */; };
+		438F2EBE214AAEAA001C1022 /* AddAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EBD214AAEAA001C1022 /* AddAnimalTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		438F2EB72149B47D001C1022 /* PenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PenTableViewController.swift; sourceTree = "<group>"; };
 		438F2EB92149B6B0001C1022 /* AnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewController.swift; sourceTree = "<group>"; };
 		438F2EBB214A9C02001C1022 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
+		438F2EBD214AAEAA001C1022 /* AddAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				438F2EAB2149A79A001C1022 /* HabitatTableViewController.swift */,
 				438F2EB72149B47D001C1022 /* PenTableViewController.swift */,
 				438F2EB92149B6B0001C1022 /* AnimalTableViewController.swift */,
+				438F2EBD214AAEAA001C1022 /* AddAnimalTableViewController.swift */,
 				438F2EBB214A9C02001C1022 /* AnimalDetailViewController.swift */,
 				4303C30721499B0400A4C787 /* AppDelegate.swift */,
 				4303C30B21499B0400A4C787 /* Main.storyboard */,
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438F2EBE214AAEAA001C1022 /* AddAnimalTableViewController.swift in Sources */,
 				438F2EB62149ACFD001C1022 /* TemporaryData.swift in Sources */,
 				438F2EB82149B47D001C1022 /* PenTableViewController.swift in Sources */,
 				438F2EAC2149A79A001C1022 /* HabitatTableViewController.swift in Sources */,
