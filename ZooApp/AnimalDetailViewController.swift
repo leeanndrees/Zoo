@@ -16,12 +16,19 @@ class AnimalDetailViewController: UIViewController {
     @IBOutlet weak var animalSexLabel: UILabel!
     @IBOutlet weak var animalAgeLabel: UILabel!
     
+    @IBOutlet weak var animalNameField: UITextField!
+    @IBOutlet weak var animalSpeciesField: UITextField!
+    @IBOutlet weak var animalSexField: UITextField!
+    @IBOutlet weak var animalAgeField: UITextField!
+    
+    
     // MARK - Properties
     var animalToShow: Animal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayAnimalProperties()
+        toggleFieldVisibility()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,4 +46,20 @@ class AnimalDetailViewController: UIViewController {
         }
         animalAgeLabel.text = animalAge
     }
+    
+    func toggleLabelVisibility() {
+        animalNameLabel.isHidden = !animalNameLabel.isHidden
+        animalSpeciesLabel.isHidden = !animalSpeciesLabel.isHidden
+        animalAgeLabel.isHidden = !animalAgeLabel.isHidden
+        animalSexLabel.isHidden = !animalSexLabel.isHidden
+    }
+    
+    func toggleFieldVisibility() {
+        animalNameField.isHidden = !animalNameField.isHidden
+        animalSpeciesField.isHidden = !animalSpeciesField.isHidden
+        animalAgeField.isHidden = !animalAgeField.isHidden
+        animalSexField.isHidden = !animalSexField.isHidden
+    }
+    
+    
 }

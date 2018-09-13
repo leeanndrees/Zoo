@@ -368,6 +368,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z39-ee-2cE">
+                                <rect key="frame" x="25" y="358" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit Animal Details"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -391,10 +396,14 @@
                         <viewLayoutGuide key="safeArea" id="ARh-AX-uLd"/>
                     </view>
                     <connections>
+                        <outlet property="animalAgeField" destination="4lR-1n-sHt" id="Zgf-vL-Qgz"/>
                         <outlet property="animalAgeLabel" destination="3Op-N0-mkY" id="Q9e-VE-UAo"/>
+                        <outlet property="animalNameField" destination="nrY-6y-uj6" id="kp2-0r-dhK"/>
                         <outlet property="animalNameLabel" destination="BCY-6W-sNT" id="fhc-ta-HZc"/>
+                        <outlet property="animalSexField" destination="tdH-QQ-4rm" id="fQN-6v-PKC"/>
                         <outlet property="animalSexLabel" destination="Ekn-c7-Mbt" id="oiF-Yo-wKy"/>
-                        <outlet property="animalSpeciesLabel" destination="gYK-eW-g9U" id="CnT-q6-8rj"/>
+                        <outlet property="animalSpeciesField" destination="vRI-nx-AWi" id="qbi-gH-hFe"/>
+                        <outlet property="animalSpeciesLabel" destination="gYK-eW-g9U" id="Y9w-Ox-X6u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwC-He-Eu1" userLabel="First Responder" sceneMemberID="firstResponder"/>
