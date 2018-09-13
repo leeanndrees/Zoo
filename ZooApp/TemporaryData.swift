@@ -12,6 +12,9 @@ var animalsInZoo: [Animal] = [
     Animal(species: "Lion", name: "Selma", sex: "F"),
     Animal(species: "Lion", name: "Lionel", sex: "M"),
     BabyAnimal(species: "Lion", name: "Fiona", sex: "F", age: "3 months"),
+    Animal(species: "Elephant", name: "Margot", sex: "F"),
+    Animal(species: "Elephant", name: "George", sex: "M"),
+    BabyAnimal(species: "Elephant", name: "Susan", sex: "F", age: "6 months"),
     Animal(species: "Arctic Fox", name: "Meryl", sex: "F")
 ]
 
@@ -21,8 +24,9 @@ var habitatsInZoo: [Habitat] = [
 
 var lionPen = Pen(name: "Lion Pen", animals: [])
 var arcticFoxPen = Pen(name: "Arctic Fox Pen", animals: [])
+var elephantPen = Pen(name: "Elephant Pen", animals: [])
 
-var grassland = Habitat(pens: [lionPen], name: "Grassland")
+var grassland = Habitat(pens: [lionPen, elephantPen], name: "Grassland")
 var arctic = Habitat(pens: [arcticFoxPen], name: "Arctic")
 
 func populatePens() {
@@ -32,6 +36,9 @@ func populatePens() {
         }
         else if animal.species == "Arctic Fox" {
             arcticFoxPen.animals.append(animal)
+        }
+        else if animal.species == "Elephant" {
+            elephantPen.animals.append(animal)
         }
     }
 }
