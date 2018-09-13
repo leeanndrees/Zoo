@@ -120,3 +120,18 @@ extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
         navigationController?.popViewController(animated: true)
     }
 }
+
+extension AnimalTableViewController: AnimalDetailViewControllerDelegate {
+    func detailViewController(_ controller: AnimalDetailViewController, didFinishEditing animal: Animal) {
+        
+//        guard let index = animalsToShow.index(of: animal) else { return }
+//        let indexPath = IndexPath(row: index, section: 0)
+//
+//        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+//        cell.textLabel?.text = animal.name
+//        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    
+}

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol AnimalDetailViewControllerDelegate: class {
+    func detailViewController(_ controller: AnimalDetailViewController, didFinishEditing animal: Animal)
+}
+
 class AnimalDetailViewController: UIViewController {
     
     // MARK - Outlets
@@ -24,6 +28,7 @@ class AnimalDetailViewController: UIViewController {
     
     // MARK - Properties
     var animalToShow: Animal?
+    weak var delegate: AnimalDetailViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +78,10 @@ class AnimalDetailViewController: UIViewController {
     @IBAction func editAnimalButton(_ sender: UIButton) {
         toggleLabelVisibility()
         toggleFieldVisibility()
+    }
+    
+    @IBAction func save() {
+        
     }
     
 }

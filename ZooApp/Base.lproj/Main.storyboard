@@ -280,7 +280,7 @@
             </objects>
             <point key="canvasLocation" x="2506" y="880"/>
         </scene>
-        <!--Animal Detail View Controller-->
+        <!--Title-->
         <scene sceneID="OqT-90-wbA">
             <objects>
                 <viewController id="mL4-ux-dGP" customClass="AnimalDetailViewController" customModule="ZooApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -398,6 +398,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ARh-AX-uLd"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="74Q-V2-v9Z">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="JIK-uU-ZRr">
+                            <connections>
+                                <action selector="save" destination="mL4-ux-dGP" id="zgo-Uw-tbN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="animalAgeField" destination="4lR-1n-sHt" id="Zgf-vL-Qgz"/>
                         <outlet property="animalAgeLabel" destination="3Op-N0-mkY" id="Q9e-VE-UAo"/>
