@@ -9,6 +9,9 @@
 import UIKit
 
 class AnimalTableViewController: UITableViewController {
+    
+    // MARK: - Properties
+    var animalsToShow = lionPen.animals
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,17 +20,22 @@ class AnimalTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func swipeToDelete(indexPath: IndexPath) {
+        animalsToShow.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+    }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return lionPen.animals.count
+        return animalsToShow.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalCell", for: indexPath)
-        cell.textLabel?.text = lionPen.animals[indexPath.row].name
+        cell.textLabel?.text = animalsToShow[indexPath.row].name
         return cell
     }
 
@@ -39,17 +47,11 @@ class AnimalTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            swipeToDelete(indexPath: indexPath)
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
