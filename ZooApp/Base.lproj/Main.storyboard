@@ -135,11 +135,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Op-N0-mkY">
+                                <rect key="frame" x="172" y="404" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ARh-AX-uLd"/>
                     </view>
                     <connections>
+                        <outlet property="animalAgeLabel" destination="3Op-N0-mkY" id="Q9e-VE-UAo"/>
                         <outlet property="animalNameLabel" destination="BCY-6W-sNT" id="fhc-ta-HZc"/>
                         <outlet property="animalSexLabel" destination="Ekn-c7-Mbt" id="oiF-Yo-wKy"/>
                         <outlet property="animalSpeciesLabel" destination="gYK-eW-g9U" id="CnT-q6-8rj"/>
