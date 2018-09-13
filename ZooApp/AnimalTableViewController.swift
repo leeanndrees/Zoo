@@ -57,6 +57,10 @@ class AnimalTableViewController: UITableViewController {
             guard let animalDetailViewController = segue.destination as? AnimalDetailViewController else { return }
             animalDetailViewController.animalToShow = animalsToShow[selectedAnimalIndex]
         }
+        else if segue.identifier == "AddAnimal" {
+            guard let add = segue.destination as? AddAnimalTableViewController else { return }
+            add.delegate = self
+        }
     }
 
     /*
@@ -98,4 +102,21 @@ class AnimalTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
+    func addAnimalTableViewControllerDidCancel(_ controller: AddAnimalTableViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addAnimalTableViewController(_ controller: AddAnimalTableViewController, didFinishAdding item: Animal) {
+        
+        let newRowIndex = animalsToShow.count
+        animalsToShow.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        
+        navigationController?.popViewController(animated: true)
+    }
 }

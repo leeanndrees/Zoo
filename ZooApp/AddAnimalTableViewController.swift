@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol AddAnimalTableViewControllerDelegate: class {
+    func addAnimalTableViewControllerDidCancel(_ controller: AddAnimalTableViewController)
+    func addAnimalTableViewController(_ controller: AddAnimalTableViewController, didFinishAdding item: Animal)
+}
+
 class AddAnimalTableViewController: UITableViewController {
     
     // MARK: - Properties
+    weak var delegate: AddAnimalTableViewControllerDelegate?
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var speciesTextField: UITextField!
     @IBOutlet weak var sexTextField: UITextField!
@@ -26,9 +32,17 @@ class AddAnimalTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    
     @IBAction func babyAnimalButton(_ sender: UIButton) {
         ageCell.isHidden = false
+    }
+    
+    @IBAction func cancel() {
+        delegate?.addAnimalTableViewControllerDidCancel(self)
+    }
+    
+    @IBAction func save() {
+        let animal = Animal(species: speciesTextField.text!, name: nameTextField.text!, sex: sexTextField.text!)
+        delegate?.addAnimalTableViewController(self, didFinishAdding: animal)
     }
     
 

@@ -103,7 +103,7 @@
                     <navigationItem key="navigationItem" title="Animals" largeTitleDisplayMode="never" id="kVh-7Q-3RZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zTt-j1-qyt">
                             <connections>
-                                <segue destination="kRj-aF-AfY" kind="show" id="zS6-rp-VUM"/>
+                                <segue destination="kRj-aF-AfY" kind="show" identifier="AddAnimal" id="zS6-rp-VUM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -112,7 +112,7 @@
             </objects>
             <point key="canvasLocation" x="2507" y="135"/>
         </scene>
-        <!--Add Animal Table View Controller-->
+        <!--Add Animal-->
         <scene sceneID="HJ8-vQ-xoZ">
             <objects>
                 <tableViewController id="kRj-aF-AfY" customClass="AddAnimalTableViewController" customModule="ZooApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -252,6 +252,22 @@
                             <outlet property="delegate" destination="kRj-aF-AfY" id="nmw-gb-eKb"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="2Vj-o2-78g"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Add Animal" largeTitleDisplayMode="never" id="1Ll-7e-NRH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Eq8-sa-2ER">
+                            <connections>
+                                <action selector="cancel" destination="kRj-aF-AfY" id="SDw-F7-2XR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="HVa-Ro-6En">
+                            <connections>
+                                <action selector="save" destination="kRj-aF-AfY" id="ui1-GO-5ru"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="ageCell" destination="7bP-1t-kGh" id="FNO-NA-Le0"/>
                         <outlet property="ageTextField" destination="2xS-OQ-TlP" id="VPi-SC-Zej"/>
@@ -262,7 +278,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oC-ge-NKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2504.8000000000002" y="909.89505247376314"/>
+            <point key="canvasLocation" x="2506" y="880"/>
         </scene>
         <!--Animal Detail View Controller-->
         <scene sceneID="OqT-90-wbA">
