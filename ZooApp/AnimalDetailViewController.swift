@@ -61,5 +61,9 @@ class AnimalDetailViewController: UIViewController {
         animalSexField.isHidden = !animalSexField.isHidden
     }
     
+    @IBAction func editAnimalButton(_ sender: UIButton) {
+        toggleLabelVisibility()
+        toggleFieldVisibility()
+    }
     
 }

@@ -372,6 +372,9 @@
                                 <rect key="frame" x="25" y="358" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Animal Details"/>
+                                <connections>
+                                    <action selector="editAnimalButton:" destination="mL4-ux-dGP" eventType="touchUpInside" id="EyW-ge-eK3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
