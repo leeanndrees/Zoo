@@ -11,7 +11,8 @@ import UIKit
 class PenTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var habitat: Habitat? 
+    var habitat: Habitat?
+    var selectedPenIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,19 @@ class PenTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PenCell", for: indexPath)
         cell.textLabel?.text = habitat!.pens[indexPath.row].name
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedPenIndex = indexPath.row
+        return indexPath
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PenToAnimals" {
+            guard let animalTableViewController = segue.destination as? AnimalTableViewController else { return }
+            animalTableViewController.pen = habitat!.pens[selectedPenIndex]
+            // ^ ^ ^ fix force unwrap
+        }
     }
 
 

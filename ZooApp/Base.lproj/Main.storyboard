@@ -59,7 +59,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="oeC-Sm-Iax" kind="show" id="7CS-bZ-Xdc"/>
+                                    <segue destination="oeC-Sm-Iax" kind="show" identifier="PenToAnimals" id="7CS-bZ-Xdc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

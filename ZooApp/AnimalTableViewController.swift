@@ -11,10 +11,12 @@ import UIKit
 class AnimalTableViewController: UITableViewController {
     
     // MARK: - Properties
-    var animalsToShow = lionPen.animals
+    var pen: Pen?
+    var animalsToShow: [Animal] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        animalsToShow = getAnimalData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +26,11 @@ class AnimalTableViewController: UITableViewController {
     func swipeToDelete(indexPath: IndexPath) {
         animalsToShow.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+    }
+    
+    func getAnimalData() -> [Animal] {
+        return (pen?.animals)!
+        // ^ ^ ^ add guard
     }
 
     // MARK: - Table view data source
