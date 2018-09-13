@@ -104,10 +104,10 @@
             </objects>
             <point key="canvasLocation" x="2507" y="135"/>
         </scene>
-        <!--Animal Detail Table View Controller-->
+        <!--Animal Detail View Controller-->
         <scene sceneID="OqT-90-wbA">
             <objects>
-                <viewController id="mL4-ux-dGP" customClass="AnimalDetailTableViewController" customModule="ZooApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mL4-ux-dGP" customClass="AnimalDetailViewController" customModule="ZooApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WqC-BB-Og8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
