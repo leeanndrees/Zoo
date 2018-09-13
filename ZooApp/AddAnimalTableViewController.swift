@@ -17,6 +17,8 @@ class AddAnimalTableViewController: UITableViewController {
     
     // MARK: - Properties
     weak var delegate: AddAnimalTableViewControllerDelegate?
+    var isBabyAnimal = false
+    
     @IBOutlet weak var nameTextField: UITextField!
     // TODO: don't need to specify species, it should come from Pen. maybe a dictionary of Pens to species? or a species property for Pens?
     @IBOutlet weak var speciesTextField: UITextField!
@@ -33,7 +35,20 @@ class AddAnimalTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func createAnimal() -> Animal {
+        // is there a nicer way to do this w/o repeating animal properties?
+        var newAnimal: Animal
+        if isBabyAnimal {
+            newAnimal = BabyAnimal(species: speciesTextField.text!, name: nameTextField.text!, sex: sexTextField.text!, age: ageTextField.text!)
+        }
+        else {
+            newAnimal = Animal(species: speciesTextField.text!, name: nameTextField.text!, sex: sexTextField.text!)
+        }
+        return newAnimal
+    }
+    
     @IBAction func babyAnimalButton(_ sender: UIButton) {
+        isBabyAnimal = true
         ageCell.isHidden = false
     }
     
@@ -42,7 +57,7 @@ class AddAnimalTableViewController: UITableViewController {
     }
     
     @IBAction func save() {
-        let animal = Animal(species: speciesTextField.text!, name: nameTextField.text!, sex: sexTextField.text!)
+        let animal = createAnimal()
         delegate?.addAnimalTableViewController(self, didFinishAdding: animal)
     }
     
