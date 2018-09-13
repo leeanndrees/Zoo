@@ -9,6 +9,9 @@
 import UIKit
 
 class HabitatTableViewController: UITableViewController {
+    
+    // MARK: - Properties
+    var selectedHabitatIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,20 @@ class HabitatTableViewController: UITableViewController {
     
     func useLargeTitles() {
         navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedHabitatIndex = indexPath.row
+        return indexPath
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HabitatToPens" {
+            guard let penTableViewController = segue.destination as? PenTableViewController else { return }
+            penTableViewController.habitat = habitatsInZoo[selectedHabitatIndex]
+        }
     }
 
     /*
@@ -74,14 +91,5 @@ class HabitatTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

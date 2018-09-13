@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Pam-qx-bEq" kind="show" id="ngZ-Mq-3bE"/>
+                                    <segue destination="Pam-qx-bEq" kind="show" identifier="HabitatToPens" id="ngZ-Mq-3bE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

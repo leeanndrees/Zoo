@@ -11,7 +11,7 @@ import UIKit
 class PenTableViewController: UITableViewController {
 
     // MARK: - Properties
-    var habitat: Habitat? = grassland
+    var habitat: Habitat? 
     
     override func viewDidLoad() {
         super.viewDidLoad()
