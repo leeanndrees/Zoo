@@ -17,7 +17,7 @@ class AnimalDetailViewController: UIViewController {
     @IBOutlet weak var animalAgeLabel: UILabel!
     
     // MARK - Properties
-    var animalToShow: Animal = lionPen.animals[1]
+    var animalToShow: Animal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,9 @@ class AnimalDetailViewController: UIViewController {
 
     // MARK - Methods
     func displayAnimalProperties() {
-        animalNameLabel.text = animalToShow.name
-        animalSpeciesLabel.text = animalToShow.species
-        animalSexLabel.text = animalToShow.sex
+        animalNameLabel.text = animalToShow?.name
+        animalSpeciesLabel.text = animalToShow?.species
+        animalSexLabel.text = animalToShow?.sex
         guard let animalAge = (animalToShow as? BabyAnimal)?.age else {
             animalAgeLabel.text = ""
             return

@@ -91,7 +91,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="mL4-ux-dGP" kind="show" id="LfJ-nU-bVw"/>
+                                    <segue destination="mL4-ux-dGP" kind="show" identifier="AnimalsToDetail" id="LfJ-nU-bVw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

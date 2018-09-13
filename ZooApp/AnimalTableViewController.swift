@@ -13,6 +13,7 @@ class AnimalTableViewController: UITableViewController {
     // MARK: - Properties
     var pen: Pen?
     var animalsToShow: [Animal] = []
+    var selectedAnimalIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,18 @@ class AnimalTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalCell", for: indexPath)
         cell.textLabel?.text = animalsToShow[indexPath.row].name
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        selectedAnimalIndex = indexPath.row
+        return indexPath
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AnimalsToDetail" {
+            guard let animalDetailViewController = segue.destination as? AnimalDetailViewController else { return }
+            animalDetailViewController.animalToShow = animalsToShow[selectedAnimalIndex]
+        }
     }
 
     /*
