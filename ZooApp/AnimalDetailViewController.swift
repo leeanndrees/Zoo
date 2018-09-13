@@ -56,6 +56,7 @@ class AnimalDetailViewController: UIViewController {
     }
     
     func toggleFieldVisibility() {
+        // need to only show age for babies
         animalNameField.isHidden = !animalNameField.isHidden
         animalSpeciesField.isHidden = !animalSpeciesField.isHidden
         animalAgeField.isHidden = !animalAgeField.isHidden
@@ -63,6 +64,7 @@ class AnimalDetailViewController: UIViewController {
     }
     
     func showCurrentValuesInFields() {
+        // add default case for empty fields
         animalNameField.text = animalToShow?.name
         animalSexField.text = animalToShow?.sex
         animalSpeciesField.text = animalToShow?.species
