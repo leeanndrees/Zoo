@@ -43,10 +43,10 @@ class AddAnimalTableViewController: UITableViewController {
         // is there a nicer way to do this w/o repeating animal properties?
         var newAnimal: Animal
         if isBabyAnimal {
-            newAnimal = BabyAnimal(species: speciesTextField.text!, name: nameTextField.text!, sex: sexTextField.text!, age: ageTextField.text!)
+            newAnimal = BabyAnimal(species: speciesTextField.text!, name: nameTextField.text!, sex: getSelectedSex(), age: ageTextField.text!)
         }
         else {
-            newAnimal = Animal(species: speciesTextField.text!, name: nameTextField.text!, sex: sexTextField.text!)
+            newAnimal = Animal(species: speciesTextField.text!, name: nameTextField.text!, sex: getSelectedSex())
         }
         return newAnimal
     }
@@ -93,5 +93,28 @@ extension AddAnimalTableViewController: UIPickerViewDataSource, UIPickerViewDele
         } else {
             return "Female"
         }
+    }
+    
+    private func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) -> String {
+        let sexSelected = pickerView.selectedRow(inComponent: 0)
+        var sexString: String
+        if sexSelected == 0 {
+            sexString = "Male"
+        }
+        else {
+            sexString = "Female"
+        }
+        return sexString
+    }
+    
+    func getSelectedSex() -> String {
+        var selectedSex: String
+        if sexPicker.selectedRow(inComponent: 0) == 0 {
+            selectedSex = "Male"
+        }
+        else {
+            selectedSex = "Female"
+        }
+        return selectedSex
     }
 }
