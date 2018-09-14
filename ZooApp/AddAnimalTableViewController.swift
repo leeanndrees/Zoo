@@ -88,7 +88,7 @@ extension AddAnimalTableViewController: UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if component == 0 {
+        if row == 0 {
             return "Male"
         } else {
             return "Female"
