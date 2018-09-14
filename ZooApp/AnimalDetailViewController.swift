@@ -46,26 +46,38 @@ class AnimalDetailViewController: UIViewController {
         animalNameLabel.text = animalToShow?.name
         animalSpeciesLabel.text = animalToShow?.species
         animalSexLabel.text = animalToShow?.sex
-        guard let animalAge = (animalToShow as? BabyAnimal)?.age else {
-            animalAgeLabel.text = ""
-            return
+        if isBabyAnimal() {
+            let animalAge = (animalToShow as? BabyAnimal)?.age
+            animalAgeLabel.text = animalAge
         }
-        animalAgeLabel.text = animalAge
+        else {
+            animalAgeLabel.text = ""
+        }
     }
     
     func toggleLabelVisibility() {
         animalNameLabel.isHidden = !animalNameLabel.isHidden
         animalSpeciesLabel.isHidden = !animalSpeciesLabel.isHidden
-        animalAgeLabel.isHidden = !animalAgeLabel.isHidden
         animalSexLabel.isHidden = !animalSexLabel.isHidden
+        if isBabyAnimal() {
+            animalAgeLabel.isHidden = !animalAgeLabel.isHidden
+        }
+        else {
+            animalAgeLabel.isHidden = true
+        }
     }
     
     func toggleFieldVisibility() {
         // need to only show age for babies
         animalNameField.isHidden = !animalNameField.isHidden
         animalSpeciesField.isHidden = !animalSpeciesField.isHidden
-        animalAgeField.isHidden = !animalAgeField.isHidden
         animalSexField.isHidden = !animalSexField.isHidden
+        if isBabyAnimal() {
+            animalAgeField.isHidden = !animalAgeField.isHidden
+        }
+        else {
+            animalAgeField.isHidden = true
+        }
     }
     
     func isBabyAnimal() -> Bool {
