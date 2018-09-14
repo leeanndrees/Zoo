@@ -19,6 +19,8 @@ class AddAnimalTableViewController: UITableViewController {
     weak var delegate: AddAnimalTableViewControllerDelegate?
     var isBabyAnimal = false
     
+    @IBOutlet weak var sexPicker: UIPickerView!
+    
     @IBOutlet weak var nameTextField: UITextField!
     // TODO: don't need to specify species, it should come from Pen. maybe a dictionary of Pens to species? or a species property for Pens? or pass species data in from pen in segue?
     @IBOutlet weak var speciesTextField: UITextField!
@@ -29,6 +31,8 @@ class AddAnimalTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ageCell.isHidden = true
+        sexPicker.dataSource = self
+        sexPicker.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,4 +76,22 @@ class AddAnimalTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension AddAnimalTableViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
+            return "Male"
+        } else {
+            return "Female"
+        }
+    }
 }
