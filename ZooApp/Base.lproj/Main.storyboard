@@ -401,7 +401,7 @@
                     <navigationItem key="navigationItem" title="Title" id="74Q-V2-v9Z">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="JIK-uU-ZRr">
                             <connections>
-                                <action selector="save" destination="mL4-ux-dGP" id="zgo-Uw-tbN"/>
+                                <action selector="save:" destination="mL4-ux-dGP" id="Uad-kb-PlS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

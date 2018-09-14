@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Animal: Codable {
+class Animal: NSObject, Codable {
     var species: String
     var name: String
     var sex: String

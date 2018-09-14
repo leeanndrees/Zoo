@@ -80,8 +80,18 @@ class AnimalDetailViewController: UIViewController {
         toggleFieldVisibility()
     }
     
-    @IBAction func save() {
+    @IBAction func save(_ sender: UIBarButtonItem) {
+        guard let animal = animalToShow else { return }
         
+        guard let updatedName = animalNameField.text else { return }
+        animal.name = updatedName
+        guard let updatedSpecies = animalSpeciesField.text else { return }
+        animal.species = updatedSpecies
+        guard let updatedSex = animalSexField.text else { return }
+        animal.sex = updatedSex
+        // need to add age here for babies
+        
+        delegate?.detailViewController(self, didFinishEditing: animal)
     }
     
 }

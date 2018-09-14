@@ -56,6 +56,7 @@ class AnimalTableViewController: UITableViewController {
         if segue.identifier == "AnimalsToDetail" {
             guard let animalDetailViewController = segue.destination as? AnimalDetailViewController else { return }
             animalDetailViewController.animalToShow = animalsToShow[selectedAnimalIndex]
+            animalDetailViewController.delegate = self
         }
         else if segue.identifier == "AddAnimal" {
             guard let add = segue.destination as? AddAnimalTableViewController else { return }
@@ -124,14 +125,11 @@ extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
 extension AnimalTableViewController: AnimalDetailViewControllerDelegate {
     func detailViewController(_ controller: AnimalDetailViewController, didFinishEditing animal: Animal) {
         
-//        guard let index = animalsToShow.index(of: animal) else { return }
-//        let indexPath = IndexPath(row: index, section: 0)
-//
-//        guard let cell = tableView.cellForRow(at: indexPath) else { return }
-//        cell.textLabel?.text = animal.name
-//        navigationController?.popViewController(animated: true)
-        
+        guard let index = animalsToShow.index(of: animal) else { return }
+        let indexPath = IndexPath(row: index, section: 0)
+
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+        cell.textLabel?.text = animal.name
+        navigationController?.popViewController(animated: true)
     }
-    
-    
 }
