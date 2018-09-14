@@ -90,6 +90,9 @@ class AnimalDetailViewController: UIViewController {
         animalNameField.text = animalToShow?.name
         animalSexField.text = animalToShow?.sex
         animalSpeciesField.text = animalToShow?.species
+        if isBabyAnimal() {
+            animalAgeField.text = (animalToShow as? BabyAnimal)?.age
+        }
     }
     
     @IBAction func editAnimalButton(_ sender: UIButton) {
