@@ -18,6 +18,8 @@ class AnimalTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animalsToShow = getAnimalData()
+        print("⭐️ Documents folder is \(documentsDirectory())")
+        print("⭐️ Data file path is \(dataFilePath())")
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +77,7 @@ class AnimalTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             swipeToDelete(indexPath: indexPath)
+            //saveAnimals()
         }
     }
 
@@ -119,6 +122,8 @@ extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
         tableView.insertRows(at: [indexPath], with: .automatic)
         
         navigationController?.popViewController(animated: true)
+        
+        //saveAnimals()
     }
 }
 
@@ -131,5 +136,31 @@ extension AnimalTableViewController: AnimalDetailViewControllerDelegate {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         cell.textLabel?.text = animal.name
         navigationController?.popViewController(animated: true)
+        
+        //saveAnimals()
+    }
+}
+
+// MARK: - Persistence
+extension AnimalTableViewController {
+    
+    func documentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func dataFilePath() -> URL {
+        return documentsDirectory().appendingPathComponent("Animals.plist")
+    }
+    
+    func saveAnimals() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(animalsToShow)
+            try data.write(to: dataFilePath(), options: Data.WritingOptions.atomic)
+        }
+        catch {
+            print("error encoding array")
+        }
     }
 }

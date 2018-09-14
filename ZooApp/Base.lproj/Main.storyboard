@@ -185,13 +185,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JI9-Wg-ul9">
-                                                    <rect key="frame" x="135" y="7" width="224" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hUu-9w-FTb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -272,13 +269,13 @@
                         <outlet property="ageCell" destination="7bP-1t-kGh" id="FNO-NA-Le0"/>
                         <outlet property="ageTextField" destination="2xS-OQ-TlP" id="VPi-SC-Zej"/>
                         <outlet property="nameTextField" destination="Qw3-Ag-LfU" id="ReO-Ig-Hcs"/>
-                        <outlet property="sexTextField" destination="JI9-Wg-ul9" id="77f-QS-2oA"/>
+                        <outlet property="sexPicker" destination="hUu-9w-FTb" id="9FF-dc-Csa"/>
                         <outlet property="speciesTextField" destination="Nai-zo-E1e" id="YgD-SM-okU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oC-ge-NKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506" y="880"/>
+            <point key="canvasLocation" x="2504.8000000000002" y="879.31034482758628"/>
         </scene>
         <!--Title-->
         <scene sceneID="OqT-90-wbA">
