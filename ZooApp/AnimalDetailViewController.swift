@@ -68,6 +68,11 @@ class AnimalDetailViewController: UIViewController {
         animalSexField.isHidden = !animalSexField.isHidden
     }
     
+    func isBabyAnimal() -> Bool {
+        guard let animal = animalToShow else { return false }
+        return animal.isMember(of: BabyAnimal.self)
+    }
+    
     func showCurrentValuesInFields() {
         // add default case for empty fields
         animalNameField.text = animalToShow?.name
