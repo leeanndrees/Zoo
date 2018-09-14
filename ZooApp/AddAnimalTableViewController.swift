@@ -20,7 +20,7 @@ class AddAnimalTableViewController: UITableViewController {
     var isBabyAnimal = false
     
     @IBOutlet weak var nameTextField: UITextField!
-    // TODO: don't need to specify species, it should come from Pen. maybe a dictionary of Pens to species? or a species property for Pens?
+    // TODO: don't need to specify species, it should come from Pen. maybe a dictionary of Pens to species? or a species property for Pens? or pass species data in from pen in segue?
     @IBOutlet weak var speciesTextField: UITextField!
     @IBOutlet weak var sexTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
