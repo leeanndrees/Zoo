@@ -18,8 +18,7 @@ class AnimalTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animalsToShow = getAnimalData()
-        print("⭐️ Documents folder is \(documentsDirectory())")
-        print("⭐️ Data file path is \(dataFilePath())")
+        setNavControllerTitle()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +46,10 @@ class AnimalTableViewController: UITableViewController {
                 grownAnimalsInPen.append(animal)
             }
         }
+    }
+    
+    func setNavControllerTitle() {
+        self.navigationItem.title = ("\(getPenName())")
     }
 
     // MARK: - Table view data source
