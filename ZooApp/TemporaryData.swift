@@ -18,7 +18,9 @@ var animalsInZoo: [Animal] = [
     Animal(species: "Rhinoceros", name: "Carolyn", sex: "F"),
     Animal(species: "Rhinoceros", name: "Richard", sex: "M"),
     BabyAnimal(species: "Rhinoceros", name: "Bobby", sex: "M", age: "6 months"),
-    Animal(species: "Arctic Fox", name: "Meryl", sex: "F")
+    Animal(species: "Arctic Fox", name: "Meryl", sex: "F"),
+    Animal(species: "Polar Bear", name: "Poppy", sex: "F"),
+    Animal(species: "Wolf", name: "William", sex: "M")
 ]
 
 var habitatsInZoo: [Habitat] = [
@@ -29,9 +31,11 @@ var lionPen = Pen(name: "Lion Pen", animals: [])
 var arcticFoxPen = Pen(name: "Arctic Fox Pen", animals: [])
 var elephantPen = Pen(name: "Elephant Pen", animals: [])
 var rhinoPen = Pen(name: "Rhinoceros Pen", animals: [])
+var polarBearPen = Pen(name: "Polar Bear Pen", animals: [])
+var wolfPen = Pen(name: "Wolf Pen", animals: [])
 
 var grassland = Habitat(pens: [lionPen, elephantPen, rhinoPen], name: "Grassland")
-var arctic = Habitat(pens: [arcticFoxPen], name: "Arctic")
+var arctic = Habitat(pens: [arcticFoxPen, polarBearPen, wolfPen], name: "Arctic")
 
 func populatePens() {
     for animal in animalsInZoo {
@@ -46,6 +50,12 @@ func populatePens() {
         }
         else if animal.species == "Rhinoceros" {
             rhinoPen.animals.append(animal)
+        }
+        else if animal.species == "Polar Bear" {
+            polarBearPen.animals.append(animal)
+        }
+        else if animal.species == "Wolf" {
+            wolfPen.animals.append(animal)
         }
     }
 }
