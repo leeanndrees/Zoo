@@ -21,6 +21,7 @@
 		438F2EBA2149B6B0001C1022 /* AnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EB92149B6B0001C1022 /* AnimalTableViewController.swift */; };
 		438F2EBC214A9C02001C1022 /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EBB214A9C02001C1022 /* AnimalDetailViewController.swift */; };
 		438F2EBE214AAEAA001C1022 /* AddAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438F2EBD214AAEAA001C1022 /* AddAnimalTableViewController.swift */; };
+		43A594B3214EF77400134B61 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A594B2214EF77400134B61 /* Species.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		438F2EB92149B6B0001C1022 /* AnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewController.swift; sourceTree = "<group>"; };
 		438F2EBB214A9C02001C1022 /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		438F2EBD214AAEAA001C1022 /* AddAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalTableViewController.swift; sourceTree = "<group>"; };
+		43A594B2214EF77400134B61 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				438F2EAD2149A93D001C1022 /* Animal.swift */,
 				438F2EB52149ACFD001C1022 /* TemporaryData.swift */,
 				438F2EB32149AA68001C1022 /* BabyAnimal.swift */,
+				43A594B2214EF77400134B61 /* Species.swift */,
 				438F2EAF2149A9D7001C1022 /* Pen.swift */,
 				438F2EB12149A9FB001C1022 /* Habitat.swift */,
 				438F2EAB2149A79A001C1022 /* HabitatTableViewController.swift */,
@@ -166,6 +169,7 @@
 				438F2EB62149ACFD001C1022 /* TemporaryData.swift in Sources */,
 				438F2EB82149B47D001C1022 /* PenTableViewController.swift in Sources */,
 				438F2EAC2149A79A001C1022 /* HabitatTableViewController.swift in Sources */,
+				43A594B3214EF77400134B61 /* Species.swift in Sources */,
 				438F2EB42149AA68001C1022 /* BabyAnimal.swift in Sources */,
 				4303C30821499B0400A4C787 /* AppDelegate.swift in Sources */,
 				438F2EAE2149A93D001C1022 /* Animal.swift in Sources */,
