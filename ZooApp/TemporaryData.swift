@@ -43,23 +43,21 @@ var arctic = Habitat(pens: [arcticFoxPen, polarBearPen, wolfPen], name: "Arctic"
 
 func populatePens() {
     for animal in animalsInZoo {
-        if animal.species == "Lion" {
+        switch animal.species {
+        case "Lion":
             lionPen.animals.append(animal)
-        }
-        else if animal.species == "Arctic Fox" {
+        case "Arctic Fox":
             arcticFoxPen.animals.append(animal)
-        }
-        else if animal.species == "Elephant" {
+        case "Elephant":
             elephantPen.animals.append(animal)
-        }
-        else if animal.species == "Rhinoceros" {
+        case "Rhinoceros":
             rhinoPen.animals.append(animal)
-        }
-        else if animal.species == "Polar Bear" {
+        case "Polar Bear":
             polarBearPen.animals.append(animal)
-        }
-        else if animal.species == "Wolf" {
+        case "Wolf":
             wolfPen.animals.append(animal)
+        default:
+            return
         }
     }
 }
