@@ -77,7 +77,7 @@ class AnimalTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             swipeToDelete(indexPath: indexPath)
-            //saveAnimals()
+            saveAnimals()
         }
     }
 
@@ -123,7 +123,7 @@ extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
         
         navigationController?.popViewController(animated: true)
         
-        //saveAnimals()
+        saveAnimals()
     }
 }
 
@@ -137,7 +137,7 @@ extension AnimalTableViewController: AnimalDetailViewControllerDelegate {
         cell.textLabel?.text = animal.name
         navigationController?.popViewController(animated: true)
         
-        //saveAnimals()
+        saveAnimals()
     }
 }
 
@@ -149,8 +149,15 @@ extension AnimalTableViewController {
         return paths[0]
     }
     
+    func getPenName() -> String {
+        guard let penName = pen?.name else {
+            return "error getting pen name"
+        }
+        return penName
+    }
+    
     func dataFilePath() -> URL {
-        return documentsDirectory().appendingPathComponent("Animals.plist")
+        return documentsDirectory().appendingPathComponent("\(getPenName())Animals.plist")
     }
     
     func saveAnimals() {
