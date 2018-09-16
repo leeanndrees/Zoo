@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="2504.8000000000002" y="879.31034482758628"/>
         </scene>
-        <!--Title-->
+        <!--Animal Detail View Controller-->
         <scene sceneID="OqT-90-wbA">
             <objects>
                 <viewController id="mL4-ux-dGP" customClass="AnimalDetailViewController" customModule="ZooApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -395,7 +395,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ARh-AX-uLd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="74Q-V2-v9Z">
+                    <navigationItem key="navigationItem" id="74Q-V2-v9Z">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="JIK-uU-ZRr">
                             <connections>
                                 <action selector="save:" destination="mL4-ux-dGP" id="Uad-kb-PlS"/>
