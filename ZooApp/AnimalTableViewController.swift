@@ -35,6 +35,19 @@ class AnimalTableViewController: UITableViewController {
         return (pen?.animals)!
         // ^ ^ ^ add guard
     }
+    
+    func separateAnimalsAndBabyAnimals() {
+        var babyAnimalsInPen: [BabyAnimal] = []
+        var grownAnimalsInPen: [Animal] = []
+        for animal in animalsToShow {
+            if isMember(of: BabyAnimal.self) {
+                babyAnimalsInPen.append(animal as! BabyAnimal)
+            }
+            else {
+                grownAnimalsInPen.append(animal)
+            }
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -150,6 +163,7 @@ extension AnimalTableViewController {
     }
     
     func getPenName() -> String {
+        // remove spaces?
         guard let penName = pen?.name else {
             return "error getting pen name"
         }
