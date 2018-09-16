@@ -27,12 +27,16 @@ var habitatsInZoo: [Habitat] = [
     grassland, arctic
 ]
 
-var lionPen = Pen(name: "Lion Pen", animals: [])
-var arcticFoxPen = Pen(name: "Arctic Fox Pen", animals: [])
-var elephantPen = Pen(name: "Elephant Pen", animals: [])
-var rhinoPen = Pen(name: "Rhinoceros Pen", animals: [])
-var polarBearPen = Pen(name: "Polar Bear Pen", animals: [])
-var wolfPen = Pen(name: "Wolf Pen", animals: [])
+var lionPen = Pen(name: "Lion Pen", animals: [], animalSpecies: "Lion")
+var arcticFoxPen = Pen(name: "Arctic Fox Pen", animals: [], animalSpecies: "Arctic Fox")
+var elephantPen = Pen(name: "Elephant Pen", animals: [], animalSpecies: "Elephant")
+var rhinoPen = Pen(name: "Rhinoceros Pen", animals: [], animalSpecies: "Rhinoceros")
+var polarBearPen = Pen(name: "Polar Bear Pen", animals: [], animalSpecies: "Polar Bear")
+var wolfPen = Pen(name: "Wolf Pen", animals: [], animalSpecies: "Wolf")
+
+var pensInZoo: [Pen] = [
+    lionPen, arcticFoxPen, elephantPen, rhinoPen, polarBearPen, wolfPen
+]
 
 var grassland = Habitat(pens: [lionPen, elephantPen, rhinoPen], name: "Grassland")
 var arctic = Habitat(pens: [arcticFoxPen, polarBearPen, wolfPen], name: "Arctic")

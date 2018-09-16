@@ -11,4 +11,5 @@ import Foundation
 struct Pen {
     var name: String
     var animals: [Animal]
+    var animalSpecies: String
 }
