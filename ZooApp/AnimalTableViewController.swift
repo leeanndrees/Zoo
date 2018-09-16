@@ -15,6 +15,7 @@ class AnimalTableViewController: UITableViewController {
     var animalsToShow: [Animal] = []
     var selectedAnimalIndex = 0
 
+    // MARK: -  Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         animalsToShow = getAnimalData()
@@ -31,8 +32,8 @@ class AnimalTableViewController: UITableViewController {
     }
     
     func getAnimalData() -> [Animal] {
-        return (pen?.animals)!
-        // ^ ^ ^ add guard
+        guard let animalData = pen?.animals else { return [] }
+        return animalData
     }
     
     func separateAnimalsAndBabyAnimals() {
@@ -55,7 +56,6 @@ class AnimalTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return animalsToShow.count
     }
 
@@ -82,48 +82,15 @@ class AnimalTableViewController: UITableViewController {
         }
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             swipeToDelete(indexPath: indexPath)
             saveAnimals()
         }
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+// MARK: - AddAnimalTableViewControllerDelegate Methods
 extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
     func addAnimalTableViewControllerDidCancel(_ controller: AddAnimalTableViewController) {
         navigationController?.popViewController(animated: true)
@@ -143,6 +110,7 @@ extension AnimalTableViewController: AddAnimalTableViewControllerDelegate {
     }
 }
 
+// MARK: - AnimalDetailViewControllerDelegate Methods
 extension AnimalTableViewController: AnimalDetailViewControllerDelegate {
     func detailViewController(_ controller: AnimalDetailViewController, didFinishEditing animal: Animal) {
         
