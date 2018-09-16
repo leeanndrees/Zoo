@@ -19,7 +19,7 @@ class AnimalDetailViewController: UIViewController {
     @IBOutlet weak var animalSpeciesLabel: UILabel!
     @IBOutlet weak var animalSexLabel: UILabel!
     @IBOutlet weak var animalAgeLabel: UILabel!
-    
+
     @IBOutlet weak var animalNameField: UITextField!
     @IBOutlet weak var animalSpeciesField: UITextField!
     @IBOutlet weak var animalSexField: UITextField!

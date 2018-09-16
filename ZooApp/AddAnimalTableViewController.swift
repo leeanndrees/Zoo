@@ -19,8 +19,8 @@ class AddAnimalTableViewController: UITableViewController {
     weak var delegate: AddAnimalTableViewControllerDelegate?
     var isBabyAnimal = false
     
+    // MARK: - Outlets
     @IBOutlet weak var sexPicker: UIPickerView!
-    
     @IBOutlet weak var nameTextField: UITextField!
     // TODO: don't need to specify species, it should come from Pen. maybe a dictionary of Pens to species? or a species property for Pens? or pass species data in from pen in segue?
     @IBOutlet weak var speciesTextField: UITextField!
@@ -63,20 +63,9 @@ class AddAnimalTableViewController: UITableViewController {
         let animal = createAnimal()
         delegate?.addAnimalTableViewController(self, didFinishAdding: animal)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+// MARK: - UIPickerViewDelegate Methods
 extension AddAnimalTableViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
